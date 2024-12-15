@@ -84,7 +84,7 @@ export const Header = styled.div`
 	}
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;

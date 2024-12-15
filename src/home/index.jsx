@@ -3,6 +3,7 @@ import * as S from "./style";
 import Fade from "./Fade";
 import ReactPlayer from "react-player";
 import Discord from "../SVG/Discord";
+import WaveMC from "../SVG/WaveMC";
 const Home = () => {
 	const [page, setPage] = useState(0);
 	const [isMuted, setIsMuted] = useState(false);
@@ -63,7 +64,9 @@ const Home = () => {
 			)}
 			<S.Container>
 				<S.Header>
-					<S.Logo src={`${path}/waveMC.png`} alt="Logo" />
+					<S.Logo>
+						<WaveMC />
+					</S.Logo>
 					<a
 						href="https://discord.gg/wavemc"
 						target="_blank"
