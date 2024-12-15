@@ -83,7 +83,7 @@ function Fade({ Des }) {
 				{dimensions.map((item, idx) => (
 					<S.Item key={idx}>
 						<S.Img
-							src={`${process.env.PUBLIC_URL}/png/background/${item.img}`}
+							src={`${process.env.PUBLIC_URL}/img/background/${item.img}`}
 							alt={`배경 ${idx + 1}`}
 						/>
 						{Des && (

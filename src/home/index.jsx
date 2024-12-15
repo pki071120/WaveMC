@@ -6,7 +6,7 @@ import Discord from "../SVG/Discord";
 const Home = () => {
 	const [page, setPage] = useState(0);
 	const [isMuted, setIsMuted] = useState(false);
-	const path = `${process.env.PUBLIC_URL}/png`;
+	const path = `${process.env.PUBLIC_URL}/img`;
 	return (
 		<>
 			{page === 0 && (
