@@ -45,7 +45,7 @@ const Home = () => {
 			{page === 2 && (
 				<S.Page>
 					<ReactPlayer
-						url={`${process.env.PUBLIC_URL}/video/wavemc_trailer.mp4`}
+						url={`/video/wavemc_trailer.mp4`}
 						playing={true}
 						width={"100vw"}
 						height={"100vh"}
@@ -63,7 +63,7 @@ const Home = () => {
 			)}
 			<S.Container>
 				<S.Header>
-					<S.Logo src={`${path}waveMC.png`} alt="Logo" />
+					<S.Logo src={`/png/waveMC.png`} alt="Logo" />
 					<a
 						href="https://discord.gg/wavemc"
 						target="_blank"
@@ -79,11 +79,11 @@ const Home = () => {
 					</span>
 					<span onClick={() => setPage(2)}>
 						<h2>[토벌하라]</h2>
-						<img src={`${path}/background/sub2.png`} alt="Thumbnail1" />
+						<img src={`/png/background/imagesub2.png`} alt="Thumbnail1" />
 					</span>
 					<span onClick={() => setPage(3)}>
 						<h2>[함께하라]</h2>
-						<img src={`${path}/background/sub3.png`} alt="Thumbnail2" />
+						<img src={`/png/background/imagesub3.png`} alt="Thumbnail2" />
 					</span>
 				</S.SubPagesWrapper>
 			</S.Container>
