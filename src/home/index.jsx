@@ -8,7 +8,6 @@ const Home = () => {
 	const [page, setPage] = useState(0);
 	const [isMuted, setIsMuted] = useState(false);
 	const [isTransitioning, setIsTransitioning] = useState(false);
-	const path = `${process.env.PUBLIC_URL}/img`;
 
 	const handlePageChange = (newPage) => {
 		if (newPage === page) return false;
@@ -61,7 +60,7 @@ const Home = () => {
 			{page === 2 && (
 				<S.Page>
 					<ReactPlayer
-						url={`${process.env.PUBLIC_URL}/video/wavemc_trailer.mp4`}
+						url={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/video/wavemc_trailer-cT5XupuXCp38bZg4BFcGkqU9LXls0X.mp4`}
 						playing={true}
 						width={"100vw"}
 						height={"100vh"}
@@ -95,11 +94,17 @@ const Home = () => {
 					</span>
 					<span onClick={() => handlePageChange(2)}>
 						<h2>[토벌하라]</h2>
-						<img src={`${path}/background/imageSub2.png`} alt="Thumbnail1" />
+						<img
+							src={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/imageSub2-n443WrnSxclIyTnZHl8VAveUdqNZWI.png`}
+							alt="Thumbnail1"
+						/>
 					</span>
 					<span onClick={() => handlePageChange(3)}>
 						<h2>[함께하라]</h2>
-						<img src={`${path}/background/imageSub3.png`} alt="Thumbnail2" />
+						<img
+							src={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/imageSub3-fKXymvWrPlDRkJExsdQul21RIz40Le.png`}
+							alt="Thumbnail2"
+						/>
 					</span>
 				</S.SubPagesWrapper>
 			</S.Container>
