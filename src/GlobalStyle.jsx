@@ -97,6 +97,7 @@ const style = css`
 	body {
 		font-family: "HeirOfLightRegular";
 		line-height: 1;
+		background-color: black;
 	}
 
 	ol,

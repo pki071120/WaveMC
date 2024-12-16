@@ -2,16 +2,31 @@ import React, { useState } from "react";
 import * as S from "./style";
 import Fade from "./Fade";
 import ReactPlayer from "react-player";
-import Discord from "../SVG/Discord";
-import WaveMC from "../SVG/WaveMC";
+import { Discord, WaveMC } from "../SVG";
+
 const Home = () => {
 	const [page, setPage] = useState(0);
 	const [isMuted, setIsMuted] = useState(false);
+	const [isTransitioning, setIsTransitioning] = useState(false);
 	const path = `${process.env.PUBLIC_URL}/img`;
+
+	const handlePageChange = (newPage) => {
+		if (newPage === page) return false;
+		if (page > 0) {
+			setPage(newPage);
+			return false;
+		}
+		setIsTransitioning(true);
+		setTimeout(() => {
+			setPage(newPage);
+			setIsTransitioning(false);
+		}, 2000);
+	};
+
 	return (
 		<>
 			{page === 0 && (
-				<S.Background>
+				<S.Background isFading={isTransitioning}>
 					<S.CheckBox>
 						<S.Text>
 							소리가 포함된 영상이 재생됩니다. 컨텐츠를 더욱 즐기려면 'on'을
@@ -21,7 +36,7 @@ const Home = () => {
 							<S.Button
 								onClick={() => {
 									setIsMuted(false);
-									setPage(1);
+									handlePageChange(1);
 								}}
 							>
 								ON
@@ -29,7 +44,7 @@ const Home = () => {
 							<S.Button
 								onClick={() => {
 									setIsMuted(true);
-									setPage(1);
+									handlePageChange(1);
 								}}
 							>
 								OFF
@@ -63,28 +78,26 @@ const Home = () => {
 				</S.Page>
 			)}
 			<S.Container>
-				<S.Header>
-					<S.Logo>
-						<WaveMC />
-					</S.Logo>
-					<a
-						href="https://discord.gg/wavemc"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Discord />
-					</a>
-				</S.Header>
+				<S.Logo>
+					<WaveMC />
+				</S.Logo>
+				<S.DiscordLink
+					href="https://discord.gg/wavemc"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Discord />
+				</S.DiscordLink>
 				<S.SubPagesWrapper>
-					<span onClick={() => setPage(1)}>
+					<span onClick={() => handlePageChange(1)}>
 						<h2>[개척하라]</h2>
 						<Fade Des={false} />
 					</span>
-					<span onClick={() => setPage(2)}>
+					<span onClick={() => handlePageChange(2)}>
 						<h2>[토벌하라]</h2>
 						<img src={`${path}/background/imageSub2.png`} alt="Thumbnail1" />
 					</span>
-					<span onClick={() => setPage(3)}>
+					<span onClick={() => handlePageChange(3)}>
 						<h2>[함께하라]</h2>
 						<img src={`${path}/background/imageSub3.png`} alt="Thumbnail2" />
 					</span>

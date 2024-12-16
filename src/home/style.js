@@ -1,11 +1,37 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+		background-color: black;
+  }
+  100% {
+		opacity: 1;
+		background-color: black;
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+		background-color: black;
+  }
+  100% {
+		opacity: 0;
+		background-color: black;
+  }
+`;
+
+const path = "../SVG/WaveMC.jsx";
 
 export const Background = styled.div`
-	background-image: url("${process.env.PUBLIC_URL}/png/wavemc.png");
+	background-image: url(${path});
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: black;
+	animation: ${({ isFading }) => (isFading ? fadeOut : fadeIn)} 2s forwards;
 `;
 
 export const CheckBox = styled.div`
@@ -60,6 +86,7 @@ export const Page = styled.div`
 	background-color: black;
 	top: 0;
 	z-index: 1;
+	animation: ${({ isFading }) => (isFading ? fadeOut : fadeIn)} 2s forwards;
 `;
 
 export const Container = styled.div`
@@ -69,27 +96,26 @@ export const Container = styled.div`
 	position: absolute;
 `;
 
-export const Header = styled.div`
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 1rem;
-	padding: 1rem;
-	background: none;
-
-	a {
-		width: 50px;
-		height: 50px;
-		z-index: 1;
-	}
-`;
-
 export const Logo = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+`;
+
+export const DiscordLink = styled.a`
+	display: flex;
+	align-items: center;
 	width: 50px;
 	height: 50px;
+	z-index: 1;
+	position: absolute;
+	bottom: 2rem;
+	left: 2rem;
 `;
 
 export const SubPagesWrapper = styled.div`
@@ -119,6 +145,7 @@ export const SubPagesWrapper = styled.div`
 			width: 110px;
 			height: 60px;
 			transition: filter 0.3s ease;
+			border-radius: 0.4rem;
 
 			&:hover {
 				filter: brightness(1.2);
