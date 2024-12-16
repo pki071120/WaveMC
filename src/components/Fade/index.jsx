@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import * as S from "./style";
 
-function Fade({ Des }) {
+function Fade({ Des, type }) {
 	const settings = {
 		autoplay: true,
 		autoplaySpeed: 10000,
@@ -87,22 +87,44 @@ function Fade({ Des }) {
 		},
 	];
 
+	const villages = [
+		{
+			url: "https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/village1-yW2WgVBN1n0ZakdWws7AstMzOKGLmf.png",
+		},
+		{
+			url: "https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/village2-BRRdbhWCtxVZymD3b8xo6rxGjMs4W7.png",
+		},
+		{
+			url: "https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/village3-QtYvVPjdCWURmenGfZTCugr3XlsUoW.png",
+		},
+		{
+			url: "https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/village4-D1Hwvq7SuaPy2mR1bzal7DuHM6JhqX.png",
+		},
+	];
+
 	return (
 		<S.Wrapper>
 			<Slider {...settings}>
-				{dimensions.map((item, idx) => (
-					<S.Item key={idx}>
-						<S.Img src={item.url} alt={`배경 ${idx + 1}`} />
-						{Des && (
-							<S.Description idx={idx}>
-								<div>
-									<h2>{item.title}</h2>
-									<p>{item.description}</p>
-								</div>
-							</S.Description>
-						)}
-					</S.Item>
-				))}
+				{type === "dimensions" &&
+					dimensions.map((item, idx) => (
+						<S.Item key={idx}>
+							<S.Img src={item.url} alt={`배경 ${idx + 1}`} />
+							{Des && (
+								<S.Description idx={idx}>
+									<div>
+										<h2>{item.title}</h2>
+										<p>{item.description}</p>
+									</div>
+								</S.Description>
+							)}
+						</S.Item>
+					))}
+				{type === "villages" &&
+					villages.map((item, idx) => (
+						<S.Item key={idx}>
+							<S.Img src={item.url} alt={`배경 ${idx + 1}`} />
+						</S.Item>
+					))}
 			</Slider>
 		</S.Wrapper>
 	);

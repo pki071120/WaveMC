@@ -8,7 +8,7 @@ const Sub3 = () => {
 	return (
 		<>
 			<S.Page>
-				<Fade />
+				<Fade type={"villages"} />
 			</S.Page>
 			<Cover navigation={navigation} />
 		</>
