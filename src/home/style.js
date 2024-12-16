@@ -23,10 +23,7 @@ const fadeOut = keyframes`
   }
 `;
 
-const path = "../SVG/WaveMC.jsx";
-
 export const Background = styled.div`
-	background-image: url(${path});
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center;
