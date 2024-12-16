@@ -3,10 +3,12 @@ import Home from "./home";
 
 function App() {
 	return (
-		<div className="App">
+		<>
 			<GlobalStyle />
-			<Home />
-		</div>
+			<div className="App">
+				<Home />
+			</div>
+		</>
 	);
 }
 
