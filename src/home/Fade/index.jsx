@@ -80,7 +80,7 @@ function Fade({ Des }) {
 		},
 		{
 			img: "image1.png",
-			url: "https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/image1-pT9IrFv0Wb3qoiaA2iC0MjX6bOdmPz.png",
+			url: "https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/image1-5Z1pvm8bf255IruuOVTEA7ehJiENmC.png",
 			title: "네더 - 불꽃의 욕망을 따르는",
 			description:
 				"네더는 기존에 이미 개척된 차원이었지만 차원 대연결 사태의 여파로 네더의 시간축이 뒤틀려 시간이 미래로 이동되었습니다. 이로 인해 네더의 환경에 맞게 진화한 여러 생물 군계를 볼 수 있습니다.버려진 성벽에는 흑마법의 산물인 위더 스켈레톤이, 황무지에는 여러가지로 분화된 피글린족들이 자리잡아 살아가는 중입니다.",
