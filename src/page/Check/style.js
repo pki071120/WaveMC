@@ -28,7 +28,7 @@ export const Background = styled.div`
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: black;
-	animation: ${({ isFading }) => (isFading ? fadeOut : fadeIn)} 2s forwards;
+	animation: ${({ isFading }) => (isFading ? fadeOut : fadeIn)} 4s forwards;
 `;
 
 export const CheckBox = styled.div`
