@@ -27,6 +27,12 @@ export const DiscordLink = styled.a`
 	position: absolute;
 	bottom: 2rem;
 	left: 2rem;
+
+	@media (max-width: 600px) {
+		top: 2.5rem;
+		left: auto;
+		right: 7rem;
+	}
 `;
 
 export const Sound = styled.div`
@@ -40,6 +46,12 @@ export const Sound = styled.div`
 	right: 1rem;
 	cursor: pointer;
 	z-index: 3;
+
+	@media (max-width: 600px) {
+		top: 2rem;
+		left: auto;
+		right: 10.5rem;
+	}
 `;
 
 export const SubPagesWrapper = styled.div`

@@ -18,9 +18,12 @@ export const Item = styled.div`
 `;
 
 export const Img = styled.img`
-	width: 100%;
-	height: 100%;
-	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	${({ type }) =>
+		type === "villages"
+			? "object-fit : contain;"
+			: "object-fit : cover; object-position: center;"};
 `;
 
 export const Description = styled.div`
@@ -28,6 +31,7 @@ export const Description = styled.div`
 	position: absolute;
 	z-index: 1;
 	border-radius: 2rem;
+
 	${({ idx }) => {
 		switch (idx) {
 			case 0:
@@ -54,6 +58,17 @@ export const Description = styled.div`
 				return "";
 		}
 	}}
+
+	@media (max-width: 430px) {
+		width: 100vw;
+		position: absolute;
+		justify-content: center;
+		top: auto;
+		bottom: 7rem;
+		right: auto;
+		left: auto;
+	}
+
 	div {
 		display: flex;
 		flex-direction: column;
@@ -87,6 +102,12 @@ export const Description = styled.div`
 			}
 		}}
 
+		@media (max-width: 430px) {
+			width: 80vw;
+			padding: 0.5rem;
+			gap: 0.8rem;
+		}
+
 		h2 {
 			font-size: 2.2rem;
 			${({ idx }) => {
@@ -115,6 +136,10 @@ export const Description = styled.div`
 						return "";
 				}
 			}}
+
+			@media (max-width: 430px) {
+				font-size: 1rem;
+			}
 		}
 		p {
 			font-size: 1rem;
@@ -146,6 +171,11 @@ export const Description = styled.div`
 						return "";
 				}
 			}}
+			@media (max-width: 430px) {
+				font-size: 0.7rem;
+				line-height: 1rem;
+				letter-spacing: 1px;
+			}
 		}
 	}
 `;

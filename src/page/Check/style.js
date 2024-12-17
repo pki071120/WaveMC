@@ -29,6 +29,7 @@ export const Background = styled.div`
 	background-position: center;
 	background-color: black;
 	animation: ${({ isFading }) => (isFading ? fadeOut : fadeIn)} 4s forwards;
+	text-align: center;
 `;
 
 export const CheckBox = styled.div`
@@ -36,6 +37,7 @@ export const CheckBox = styled.div`
 	width: 100vw;
 	height: 100vh;
 	flex-direction: column;
+	align-items: center;
 	filter: blur(100%);
 	height: 100vh;
 	-webkit-backdrop-filter: blur(10px);
@@ -45,13 +47,17 @@ export const CheckBox = styled.div`
 
 export const Text = styled.p`
 	display: flex;
-	width: 100%;
-	height: 50%;
+	width: 100vw;
+	height: 50vh;
 	justify-content: center;
 	align-items: flex-end;
 	color: #40a9ff;
 	font-size: 1.3rem;
 	font-family: "HeirOfLightBold";
+	@media (max-width: 430px) {
+		width: 80vw;
+		font-size: 1.1rem;
+	}
 `;
 
 export const ButtonWrapper = styled.div`
@@ -73,5 +79,9 @@ export const Button = styled.span`
 	}
 	:nth-of-type(2) {
 		border-left: 1px solid lightblue;
+	}
+
+	@media (max-width: 430px) {
+		font-size: 1.5rem;
 	}
 `;

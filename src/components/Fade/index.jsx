@@ -108,7 +108,7 @@ function Fade({ Des, type }) {
 				{type === "dimensions" &&
 					dimensions.map((item, idx) => (
 						<S.Item key={idx}>
-							<S.Img src={item.url} alt={`배경 ${idx + 1}`} />
+							<S.Img type="dimensions" src={item.url} alt={`배경 ${idx + 1}`} />
 							{Des && (
 								<S.Description idx={idx}>
 									<div>
@@ -122,7 +122,7 @@ function Fade({ Des, type }) {
 				{type === "villages" &&
 					villages.map((item, idx) => (
 						<S.Item key={idx}>
-							<S.Img src={item.url} alt={`배경 ${idx + 1}`} />
+							<S.Img type="villages" src={item.url} alt={`배경 ${idx + 1}`} />
 						</S.Item>
 					))}
 			</Slider>
