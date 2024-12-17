@@ -29,6 +29,19 @@ export const DiscordLink = styled.a`
 	left: 2rem;
 `;
 
+export const Sound = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	z-index: 3;
+`;
+
 export const SubPagesWrapper = styled.div`
 	display: flex;
 	position: absolute;

@@ -1,9 +1,8 @@
 import React from "react";
 import * as S from "./style";
-import Fade from "../Fade";
-import { Discord, WaveMC } from "../../SVG";
+import { Discord, WaveMC, Speaker } from "../../SVG";
 
-const Cover = ({ navigation }) => {
+const Cover = ({ navigation, isMuted, setIsMuted }) => {
 	return (
 		<S.Container>
 			<S.Logo>
@@ -16,6 +15,9 @@ const Cover = ({ navigation }) => {
 			>
 				<Discord />
 			</S.DiscordLink>
+			<S.Sound onClick={() => setIsMuted((prev) => !prev)}>
+				<Speaker isMuted={isMuted} />
+			</S.Sound>
 			<S.SubPagesWrapper>
 				<span onClick={() => navigation("/main")}>
 					<h2>[개척하라]</h2>

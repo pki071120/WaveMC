@@ -22,9 +22,18 @@ function App() {
 								/>
 							}
 						/>
-						<Route path="/main" element={<Sub1 />} />
-						<Route path="/trailer" element={<Sub2 isMuted={isMuted} />} />
-						<Route path="/villages" element={<Sub3 />} />
+						<Route
+							path="/main"
+							element={<Sub1 isMuted={isMuted} setIsMuted={setIsMuted} />}
+						/>
+						<Route
+							path="/trailer"
+							element={<Sub2 isMuted={isMuted} setIsMuted={setIsMuted} />}
+						/>
+						<Route
+							path="/villages"
+							element={<Sub3 isMuted={isMuted} setIsMuted={setIsMuted} />}
+						/>
 					</Routes>
 				</BrowserRouter>
 			</div>

@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 import { Cover } from "../../components";
 import { useNavigate } from "react-router-dom";
 
-const Sub2 = ({ isMuted }) => {
+const Sub2 = ({ isMuted, setIsMuted }) => {
 	const navigation = useNavigate();
 	return (
 		<>
@@ -20,7 +20,11 @@ const Sub2 = ({ isMuted }) => {
 					muted={isMuted}
 				/>
 			</S.Page>
-			<Cover navigation={navigation} />
+			<Cover
+				navigation={navigation}
+				isMuted={isMuted}
+				setIsMuted={setIsMuted}
+			/>
 		</>
 	);
 };
