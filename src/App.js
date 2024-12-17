@@ -23,6 +23,16 @@ function App() {
 							}
 						/>
 						<Route
+							path="*"
+							element={
+								<Check
+									setIsMuted={setIsMuted}
+									isTransitioning={isTransitioning}
+									setIsTransitioning={setIsTransitioning}
+								/>
+							}
+						/>
+						<Route
 							path="/main"
 							element={<Sub1 isMuted={isMuted} setIsMuted={setIsMuted} />}
 						/>
