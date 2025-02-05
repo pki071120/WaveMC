@@ -36,7 +36,7 @@ const Cover = ({ navigation, isMuted, setIsMuted }) => {
 				<span onClick={() => navigation("/villages")}>
 					<h2>[함께하라]</h2>
 					<img
-						src={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/village1-yW2WgVBN1n0ZakdWws7AstMzOKGLmf.png`}
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/village1.png`}
 						alt="Thumbnail2"
 					/>
 				</span>
