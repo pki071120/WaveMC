@@ -10,7 +10,7 @@ const Sub2 = ({ isMuted, setIsMuted }) => {
 		<>
 			<S.Page>
 				<ReactPlayer
-					url={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/video/wavemc_trailer-cT5XupuXCp38bZg4BFcGkqU9LXls0X.mp4`}
+					url={`https://mcwave.s3.ap-northeast-2.amazonaws.com/wavemc_trailer.mp4`}
 					playing={true}
 					width={"100vw"}
 					height={"100vh"}

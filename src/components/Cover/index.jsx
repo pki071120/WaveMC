@@ -22,14 +22,14 @@ const Cover = ({ navigation, isMuted, setIsMuted }) => {
 				<span onClick={() => navigation("/main")}>
 					<h2>[개척하라]</h2>
 					<img
-						src={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/imageSub2-n443WrnSxclIyTnZHl8VAveUdqNZWI.png`}
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%87%E1%85%A9%E1%86%AF%E1%84%90%E1%85%B3.png`}
 						alt="Thumbnail1"
 					/>
 				</span>
 				<span onClick={() => navigation("/trailer")}>
 					<h2>[토벌하라]</h2>
 					<img
-						src={`https://4r1tfd9ccoygbrkd.public.blob.vercel-storage.com/img/imageSub3-fKXymvWrPlDRkJExsdQul21RIz40Le.png`}
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%83%E1%85%B3%E1%84%85%E1%85%A9%E1%86%B7.png`}
 						alt="Thumbnail2"
 					/>
 				</span>
