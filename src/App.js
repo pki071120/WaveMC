@@ -37,11 +37,11 @@ function App() {
 							element={<Sub1 isMuted={isMuted} setIsMuted={setIsMuted} />}
 						/>
 						<Route
-							path="/trailer"
+							path="/description"
 							element={<Sub2 isMuted={isMuted} setIsMuted={setIsMuted} />}
 						/>
 						<Route
-							path="/villages"
+							path="/boss"
 							element={<Sub3 isMuted={isMuted} setIsMuted={setIsMuted} />}
 						/>
 					</Routes>
