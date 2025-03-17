@@ -39,21 +39,7 @@ export const Description = styled.div`
 			case 1:
 				return "left: 1.5rem; top: 30%;";
 			case 2:
-				return "right: 1.5rem; bottom: 20%;";
-			case 3:
-				return "right: 2rem; top: 22%;";
-			case 4:
-				return "left: 2rem; bottom: 20%;";
-			case 5:
-				return "right: 1.5rem; bottom: 18%;";
-			case 6:
-				return "right: 3rem; bottom: 20%;";
-			case 7:
-				return "left: 2rem; top: 17%;";
-			case 8:
-				return "left: 3rem; top: 25%;";
-			case 9:
-				return "left: 3rem; top: 15%;";
+				return "left: 1.5rem; bottom: 15%;";
 			default:
 				return "";
 		}
@@ -82,21 +68,7 @@ export const Description = styled.div`
 				case 1:
 					return "background: rgba(200,200,200, 0.1);";
 				case 2:
-					return "background: rgba(173, 187, 255, 0.1);";
-				case 3:
-					return "background: rgba(85, 85, 57, 0.276);";
-				case 4:
-					return "background: rgba(106, 76, 45, 0.528);";
-				case 5:
-					return "background: rgba(154, 197, 184, 0.1);";
-				case 6:
-					return "background: rgba(39, 48, 14, 0.452);";
-				case 7:
-					return "background: rgba(45, 42, 68, 0.488);";
-				case 8:
-					return "background: rgba(56, 92, 24, 0.101);";
-				case 9:
-					return "background: rgba(87, 38, 38, 0.503);";
+					return "background: rgba(256,256,256, 0.1);";
 				default:
 					return "";
 			}
@@ -110,28 +82,14 @@ export const Description = styled.div`
 
 		h2 {
 			font-size: 2.2rem;
-			${({ idx }) => {
+			${({ idx, type }) => {
 				switch (idx) {
 					case 0:
-						return "color: #c5a0ff;";
+						return type === "boss" ? "color: #9acfff;" : "color: #e9e987;";
 					case 1:
-						return "color: #e9e987;";
+						return type === "boss" ? "color: #afaaff;" : "color: #1c9f;";
 					case 2:
-						return "color: #8892fc;";
-					case 3:
-						return "color: #e4c479ac;";
-					case 4:
-						return "color: #f1b252;";
-					case 5:
-						return "color: #5ce7d5;";
-					case 6:
-						return "color: #bdd255;";
-					case 7:
-						return "color: #a0abe9ff;";
-					case 8:
-						return "color: #4b924b;";
-					case 9:
-						return "color: #ff1818;";
+						return type === "boss" ? "color: #fff;" : "color:  #dddddd;";
 					default:
 						return "";
 				}
@@ -145,28 +103,14 @@ export const Description = styled.div`
 			font-size: 1rem;
 			letter-spacing: 3px;
 			line-height: 1.1rem;
-			${({ idx }) => {
+			${({ idx, type }) => {
 				switch (idx) {
 					case 0:
-						return "color: #e3d2ffff;";
+						return type === "boss" ? "color: #aacaff;" : "color: #cdcd7d;";
 					case 1:
-						return "color: #bcbc6c;";
+						return type === "boss" ? "color: #cfc0f0;" : "color: #1a9f;";
 					case 2:
-						return "color: #7290d1;";
-					case 3:
-						return "color: #d8c494ff;";
-					case 4:
-						return "color: hsl(28, 50%, 60%);";
-					case 5:
-						return "color: #94f6f4;";
-					case 6:
-						return "color: #bbd169;";
-					case 7:
-						return "color: #b2bad2ff;";
-					case 8:
-						return "color: #1b901b;";
-					case 9:
-						return "color: #ff1e00;";
+						return type === "boss" ? "color: #efefef;" : "color: #aaaaaa;";
 					default:
 						return "";
 				}

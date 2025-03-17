@@ -90,7 +90,7 @@ function Fade({ type }) {
 					boss.map((item, idx) => (
 						<S.Item key={idx}>
 							<S.Img type="boss" src={item.url} alt={`배경 ${idx + 1}`} />
-							<S.Description idx={idx}>
+							<S.Description idx={idx} type={"boss"}>
 								<div>
 									<h2>{item.title}</h2>
 									<p>{item.description}</p>
