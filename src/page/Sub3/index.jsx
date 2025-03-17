@@ -8,7 +8,7 @@ const Sub3 = ({ isMuted, setIsMuted }) => {
 	return (
 		<>
 			<S.Page>
-				<Fade type={"villages"} />
+				<Fade type={"Boss"} />
 			</S.Page>
 			<Cover
 				navigation={navigation}
