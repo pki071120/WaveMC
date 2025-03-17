@@ -20,24 +20,24 @@ const Cover = ({ navigation, isMuted, setIsMuted }) => {
 			</S.Sound>
 			<S.SubPagesWrapper>
 				<span onClick={() => navigation("/main")}>
-					<h2>[개척하라]</h2>
+					<h2>[목도하라]</h2>
 					<img
-						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%87%E1%85%A9%E1%86%AF%E1%84%90%E1%85%B3.png`}
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2025-03-17+%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB+9.01.03.png`}
 						alt="Thumbnail1"
 					/>
 				</span>
-				<span onClick={() => navigation("/trailer")}>
-					<h2>[토벌하라]</h2>
+				<span onClick={() => navigation("/description")}>
+					<h2>[개척하라]</h2>
 					<img
-						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%83%E1%85%B3%E1%84%85%E1%85%A9%E1%86%B7.png`}
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/nature.png`}
 						alt="Thumbnail2"
 					/>
 				</span>
-				<span onClick={() => navigation("/villages")}>
-					<h2>[함께하라]</h2>
+				<span onClick={() => navigation("/boss")}>
+					<h2>[토벌하라]</h2>
 					<img
-						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/village1.png`}
-						alt="Thumbnail2"
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/boss.png`}
+						alt="Thumbnail3"
 					/>
 				</span>
 			</S.SubPagesWrapper>
