@@ -63,7 +63,7 @@ export const SubPagesWrapper = styled.div`
 	height: auto;
 	justify-content: center;
 	align-items: center;
-	color: #a4a4a4;
+	color: #dadada;
 
 	span {
 		display: flex;

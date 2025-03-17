@@ -36,7 +36,7 @@ const Cover = ({ navigation, isMuted, setIsMuted }) => {
 				<span onClick={() => navigation("/boss")}>
 					<h2>[토벌하라]</h2>
 					<img
-						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/boss.png`}
+						src={`https://mcwave.s3.ap-northeast-2.amazonaws.com/horseboss.png`}
 						alt="Thumbnail3"
 					/>
 				</span>
