@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import * as S from "./style";
 
-function Fade({ Des, type }) {
+function Fade({ type }) {
 	const settings = {
 		autoplay: true,
 		autoplaySpeed: 10000,
@@ -14,115 +14,88 @@ function Fade({ Des, type }) {
 		waitForAnimate: false,
 	};
 
-	const dimensions = [
+	const des = [
 		{
-			img: "image2.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%83%E1%85%B3.png",
-			title: "엔드 - 유리조각처럼 산산조각난",
+			img: "world.png",
+			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/nature.png",
+			title: "[세계]",
 			description:
-				"고요하고 끝을 알 수 없는 상태로, 해도 달도 존재하지는 않는 절망적인 차원입니다. 가장 불안전한 차원이기도 하며, 지형지물이 다른 차원의 가능성과 겹쳐져 여러 차원의 모습을 동시에 띄고 있습니다. 생물 군계의 일부는 엔더에 맞게 다시 적응하였으며 일부 군계는 본래의 모습도 찾기 어려울 수 있습니다. 기괴한 모습을 한 엔드 시티와 비행선 등 정상적으로 건축이 불가능한 곡예에 가까운 구조물과 지형의 불균형함은 그야말로 신이 버린 땅이라는 명칭에 어울립니다.",
+				"황금기의 절정에 도달한 오버월드에서 당신의 기지와 기술, 용기를 최대한으로 활용하세요." +
+				"드넓은 땅에서 당신을 막을 자를 없애려면 그들의 위로 올라가야 합니다.",
 		},
 		{
-			img: "image3.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%91%E1%85%A9%E1%84%8B%E1%85%A5.png",
-			title: "포어 - 누구도 구원할 수 없는",
+			img: "creature.png",
+			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/creature.png",
+			title: "[생물]",
 			description:
-				"오버월드의 지하에 있는 거대한 동굴이자 차원입니다. 과거 고도의 기술력을 가진 종족이 있었으나 멸망 후 오랫동안 방치된 상태입니다. 포어의 기술력은 지하 자원에서 비롯된 것으로 추측되며, 아직도 많은 귀중한 자원이 남아있습니다. 하지만 방치된 탓에 기술력이 뒤틀리고 생물들이 진화하며 스컬크에 뒤덮힌 강력한 적들이 생겨났습니다.",
+				"드넓은 이 땅에서 마침내 새로운 생물이 출현하기 시작했습니다." +
+				"이 경이로운 광경을 직접 목격하고, 세계의 기록자가 되십시오.",
 		},
 		{
-			img: "image7.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%8F%E1%85%A5%E1%84%82%E1%85%A5%E1%86%AF.png",
-			title: "커널 - 뼈까지 파고드는",
+			img: "armor.png",
+			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/armor.png",
+			title: "[장비]",
 			description:
-				"혹한 환경을 가진 차원으로, 마력 폭풍으로 얼음이 변질되었습니다. 이곳에 발을 들이는 자는 죽어간 뒤 마력이 깃든 얼음에 마음을 빼앗겨 차가운 인형이 됩니다. 도망자와 추방자들이 많이 찾아오는 곳으로, 위험한 환경과 비극적인 이야기들이 담겨 있습니다.",
-		},
-		{
-			img: "image10.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%89%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A5%E1%86%B7.png",
-			title: "생텀 - 이름밖에 존재하지 않는",
-			description:
-				"'성소'라 불리며 찬란한 문명을 가졌던 차원이지만 종족 전쟁의 여파로 문명이 파괴되었습니다. 현재는 알 수 없는 폭풍이 생텀 전역을 휩쓸며 문명의 잔재는 거의 남아있지 않습니다. 이 폭풍은 오버월드마저 위협할 수 있습니다.",
-		},
-		{
-			img: "image6.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%8E%E1%85%A2%E1%84%83%E1%85%A5.png",
-			title: "채더 - 용서받지 못하는",
-			description:
-				"완전히 격리된 차원으로, 죄인들을 유배시키던 곳으로 추측됩니다. 식물 없는 척박한 환경과 높이에 따라 바뀌는 지형이 특징입니다. 최하층에는 죄인들을 심판하는 '노예'라 불리는 채더의 마지막 왕이 존재합니다. 위험하지만 채더만의 강력한 장비들을 얻을 수 있습니다.",
-		},
-		{
-			img: "image8.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%8B%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB.png",
-			title: "오션 - 되돌릴 수 없는",
-			description:
-				"다차원 간 기업이 지상 낙원을 만들려 했으나 실패하여 치명적인 신경독이 퍼진 황천의 강으로 변해버린 차원입니다. 정상적인 생명체가 없는 땅이 되었으며, 이곳의 진상을 밝혀야 할 필요가 있습니다.",
-		},
-		{
-			img: "image5.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%89%E1%85%A2%E1%84%83%E1%85%A5.png",
-			title: "새더 - 무엇도 신성할 수 없는",
-			description:
-				"물 위에 솟아난 석영질 암석으로 구성된 차원입니다. 식생과 동물은 더 이상 자라거나 늙지 않는 불로불사의 특징을 가집니다. 종교인들은 이곳을 신의 고향으로 여깁니다. 학자들은 차원의 틈에서 생성된 통로이자 더 높은 차원의 존재들이 이용하는 곳으로 추측하고 있습니다.",
-		},
-		{
-			img: "image4.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%92%E1%85%A2%E1%84%83%E1%85%A5.png",
-			title: "해더 - 빛의 근원을 잃어버린",
-			description:
-				"오버월드의 하늘 위에 있는 섬이자 차원입니다. 환경과 생명체는 오버월드와 비슷하지만 마법이 더욱 발전한 모습을 보입니다. 과거에는 강력한 마법으로 입지를 다졌으나, 무리한 사용으로 인해 해가 사라지고 달만 남게 되면서 어둠에 갇혔습니다. 생명체 대부분이 미쳐 극히 일부만 살아남았으나 지금이 개척할 최적의 타이밍입니다.",
-		},
-		{
-			img: "image9.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3.png",
-			title: "우드 - 모든 것이 출발하는",
-			description:
-				"개척되지 않은 자연 그대로의 원시 차원입니다. 이곳의 거주민 '엘븐'과 소종족들은 자연과 조화를 이루며 살아갑니다. 철기시대 이상의 자원은 없고, 단단한 나무만이 빼곡히 자라 있는 것이 특징입니다.",
-		},
-		{
-			img: "image1.png",
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/%E1%84%82%E1%85%A6%E1%84%83%E1%85%A5.png",
-			title: "네더 - 불꽃의 욕망을 따르는",
-			description:
-				"네더는 기존에 이미 개척된 차원이었지만 차원 대연결 사태의 여파로 네더의 시간축이 뒤틀려 시간이 미래로 이동되었습니다. 이로 인해 네더의 환경에 맞게 진화한 여러 생물 군계를 볼 수 있습니다.버려진 성벽에는 흑마법의 산물인 위더 스켈레톤이, 황무지에는 여러가지로 분화된 피글린족들이 자리잡아 살아가는 중입니다.",
+				"이 땅에서 할 수 있는 것은 다양한 것이 있습니다. 그중에서도 대표적인 것은, 무를 갈고 닦는 일입니다." +
+				"새로운 스킬이 담긴 장비를 위해 직접 재료를 얻고 내 손으로 제련하여 정점에 도달하십시오.",
 		},
 	];
 
-	const villages = [
+	const boss = [
 		{
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/village1.png",
+			img: "horseboss.png",
+			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/horseboss.png",
+			title: "[악몽을 뱉는 기수]",
+			description:
+				"오버월드의 악몽이 모여 만들어진 집합체입니다." +
+				"적어도 이 악몽이 담긴 창날검은 그가 사용할 때까지는 절대로 부러지지 않지만, 말에서 낙마시키는 것은 가능할 것 같습니다." +
+				"다만, 그것이 어떤 반동을 불러올지는 아무도 모릅니다..",
 		},
 		{
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/village2.png",
+			img: "witch.png",
+			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/witch.png",
+			title: "[세상을 보는 심연]",
+			description:
+				"아주 먼 옛날 엔드에서 오버월드가 변화하기 전부터 세상을 바라보았다는 전설 때문에 붙여진 이 이름의 마녀는" +
+				"일반적인 오버월드의 마녀와 풍기는 아우라부터가 다릅니다." +
+				"공허의 마법이 담긴 큐브를 적극적으로 활용해 공격해오며, 공허 저편에서부터 뻗어오는 촉수는" +
+				"당신의 방어구를 관통시키고도 남으니 각별한 주의를 요합니다.",
 		},
 		{
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/village3.png",
-		},
-		{
-			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/village4.png",
+			img: "enderboss.png",
+			url: "https://mcwave.s3.ap-northeast-2.amazonaws.com/boss.png",
+			title: "[위더 스톰]",
+			description:
+				"위더를 넘어선 재앙 [위더 스톰]은 용맹한 모험가 10명이 덤벼와도 그것들을 모조리 쓸어버릴 힘을 가졌습니다." +
+				"그것이 오버월드에 도래하게 두어서는 안됩니다..",
 		},
 	];
 
 	return (
 		<S.Wrapper>
 			<Slider {...settings}>
-				{type === "dimensions" &&
-					dimensions.map((item, idx) => (
+				{type === "Des" &&
+					des.map((item, idx) => (
 						<S.Item key={idx}>
-							<S.Img type="dimensions" src={item.url} alt={`배경 ${idx + 1}`} />
-							{Des && (
-								<S.Description idx={idx}>
-									<div>
-										<h2>{item.title}</h2>
-										<p>{item.description}</p>
-									</div>
-								</S.Description>
-							)}
+							<S.Img type="des" src={item.url} alt={`배경 ${idx + 1}`} />
+							<S.Description idx={idx}>
+								<div>
+									<h2>{item.title}</h2>
+									<p>{item.description}</p>
+								</div>
+							</S.Description>
 						</S.Item>
 					))}
-				{type === "villages" &&
-					villages.map((item, idx) => (
+				{type === "Boss" &&
+					boss.map((item, idx) => (
 						<S.Item key={idx}>
-							<S.Img type="villages" src={item.url} alt={`배경 ${idx + 1}`} />
+							<S.Img type="boss" src={item.url} alt={`배경 ${idx + 1}`} />
+							<S.Description idx={idx}>
+								<div>
+									<h2>{item.title}</h2>
+									<p>{item.description}</p>
+								</div>
+							</S.Description>
 						</S.Item>
 					))}
 			</Slider>
