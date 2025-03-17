@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./style";
-import ReactPlayer from "react-player";
-import { Cover } from "../../components";
+import { Fade, Cover } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const Sub2 = ({ isMuted, setIsMuted }) => {
@@ -9,16 +8,7 @@ const Sub2 = ({ isMuted, setIsMuted }) => {
 	return (
 		<>
 			<S.Page>
-				<ReactPlayer
-					url={`https://mcwave.s3.ap-northeast-2.amazonaws.com/wavemc_trailer.mp4`}
-					playing={true}
-					width={"100vw"}
-					height={"100vh"}
-					loop={true}
-					controls={false}
-					pip={true}
-					muted={isMuted}
-				/>
+				<Fade type={"Des"} />
 			</S.Page>
 			<Cover
 				navigation={navigation}
