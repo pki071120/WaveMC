@@ -78,7 +78,7 @@ function Fade({ type }) {
 					des.map((item, idx) => (
 						<S.Item key={idx}>
 							<S.Img type="des" src={item.url} alt={`배경 ${idx + 1}`} />
-							<S.Description idx={idx}>
+							<S.Description idx={idx} type={"des"}>
 								<div>
 									<h2>{item.title}</h2>
 									<p>{item.description}</p>
