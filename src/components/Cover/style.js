@@ -1,10 +1,20 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	z-index: 2;
 	position: absolute;
+`;
+
+export const Header = styled.div`
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
 `;
 
 export const Logo = styled.div`
@@ -13,9 +23,19 @@ export const Logo = styled.div`
 	justify-content: center;
 	width: 70px;
 	height: 70px;
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
+	@media (max-width: 600px) {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+`;
+
+export const Footer = styled.div`
+	display: flex;
+	margin: 1rem;
+	width: 95vw;
+	justify-content: space-around;
+	align-items: end;
 `;
 
 export const DiscordLink = styled.a`
@@ -24,13 +44,10 @@ export const DiscordLink = styled.a`
 	width: 50px;
 	height: 50px;
 	z-index: 1;
-	position: absolute;
-	bottom: 2rem;
-	left: 2rem;
 
 	@media (max-width: 600px) {
+		position: absolute;
 		top: 2.5rem;
-		left: auto;
 		right: 7rem;
 	}
 `;
@@ -41,13 +58,11 @@ export const Sound = styled.div`
 	justify-content: center;
 	width: 4rem;
 	height: 4rem;
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
 	cursor: pointer;
 	z-index: 3;
 
 	@media (max-width: 600px) {
+		position: absolute;
 		top: 2rem;
 		left: auto;
 		right: 10.5rem;
@@ -56,8 +71,6 @@ export const Sound = styled.div`
 
 export const SubPagesWrapper = styled.div`
 	display: flex;
-	position: absolute;
-	bottom: 1rem;
 	gap: 2rem;
 	width: 100%;
 	height: auto;
