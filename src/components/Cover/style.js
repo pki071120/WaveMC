@@ -36,6 +36,10 @@ export const Footer = styled.div`
 	width: 95vw;
 	justify-content: space-around;
 	align-items: end;
+
+	@media (max-width: 600px) {
+		height: 100vh;
+	}
 `;
 
 export const DiscordLink = styled.a`
@@ -77,6 +81,10 @@ export const SubPagesWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	color: #dadada;
+
+	@media (max-width: 600px) {
+		align-items: flex-end;
+	}
 
 	span {
 		display: flex;
