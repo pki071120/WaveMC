@@ -50,7 +50,7 @@ export const Description = styled.div`
 		position: absolute;
 		justify-content: center;
 		top: auto;
-		bottom: 7rem;
+		bottom: 8rem;
 		right: auto;
 		left: auto;
 	}

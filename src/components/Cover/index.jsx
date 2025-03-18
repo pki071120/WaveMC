@@ -1,24 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import { Discord, WaveMC, Speaker } from "../../SVG";
 
 const Cover = ({ navigation, isMuted, setIsMuted }) => {
+	const [width, setWidth] = useState(window.innerWidth);
+
+	const handleResize = () => {
+		setWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 	return (
 		<S.Container>
 			<S.Header>
+				{width <= 600 && (
+					<S.Sound onClick={() => setIsMuted((prev) => !prev)}>
+						<Speaker isMuted={isMuted} />
+					</S.Sound>
+				)}
+				{width <= 600 && (
+					<S.DiscordLink
+						href="https://discord.gg/wavemc"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Discord />
+					</S.DiscordLink>
+				)}
 				<S.Logo>
 					<WaveMC />
 				</S.Logo>
 			</S.Header>
 
 			<S.Footer>
-				<S.DiscordLink
-					href="https://discord.gg/wavemc"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Discord />
-				</S.DiscordLink>
+				{width > 600 && (
+					<S.DiscordLink
+						href="https://discord.gg/wavemc"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Discord />
+					</S.DiscordLink>
+				)}
 				<S.SubPagesWrapper>
 					<span onClick={() => navigation("/main")}>
 						<h2>[목도하라]</h2>
@@ -42,9 +70,11 @@ const Cover = ({ navigation, isMuted, setIsMuted }) => {
 						/>
 					</span>
 				</S.SubPagesWrapper>
-				<S.Sound onClick={() => setIsMuted((prev) => !prev)}>
-					<Speaker isMuted={isMuted} />
-				</S.Sound>
+				{width > 600 && (
+					<S.Sound onClick={() => setIsMuted((prev) => !prev)}>
+						<Speaker isMuted={isMuted} />
+					</S.Sound>
+				)}
 			</S.Footer>
 		</S.Container>
 	);

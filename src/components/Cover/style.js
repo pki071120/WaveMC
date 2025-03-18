@@ -15,6 +15,8 @@ export const Header = styled.div`
 	display: flex;
 	width: 100%;
 	justify-content: flex-end;
+	align-items: center;
+	margin-right: 1.5rem;
 `;
 
 export const Logo = styled.div`
@@ -24,9 +26,6 @@ export const Logo = styled.div`
 	width: 70px;
 	height: 70px;
 	@media (max-width: 600px) {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
 	}
 `;
 
@@ -38,7 +37,8 @@ export const Footer = styled.div`
 	align-items: end;
 
 	@media (max-width: 600px) {
-		height: 100vh;
+		height: 95vh;
+		position: absolute;
 	}
 `;
 
@@ -48,12 +48,6 @@ export const DiscordLink = styled.a`
 	width: 50px;
 	height: 50px;
 	z-index: 1;
-
-	@media (max-width: 600px) {
-		position: absolute;
-		top: 2.5rem;
-		right: 7rem;
-	}
 `;
 
 export const Sound = styled.div`
@@ -64,13 +58,6 @@ export const Sound = styled.div`
 	height: 4rem;
 	cursor: pointer;
 	z-index: 3;
-
-	@media (max-width: 600px) {
-		position: absolute;
-		top: 2rem;
-		left: auto;
-		right: 10.5rem;
-	}
 `;
 
 export const SubPagesWrapper = styled.div`
