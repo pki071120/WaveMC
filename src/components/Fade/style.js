@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export const Wrapper = styled.div`
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: absolute;
 	top: 0;
 	left: 0;
