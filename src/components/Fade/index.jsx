@@ -78,24 +78,24 @@ function Fade({ type }) {
 					des.map((item, idx) => (
 						<S.Item key={idx}>
 							<S.Img type="des" src={item.url} alt={`배경 ${idx + 1}`} />
-							{/* <S.Description idx={idx} type={"des"}>
+							<S.Description idx={idx} type={"des"}>
 								<div>
 									<h2>{item.title}</h2>
 									<p>{item.description}</p>
 								</div>
-							</S.Description> */}
+							</S.Description>
 						</S.Item>
 					))}
 				{type === "Boss" &&
 					boss.map((item, idx) => (
 						<S.Item key={idx}>
 							<S.Img type="boss" src={item.url} alt={`배경 ${idx + 1}`} />
-							{/* <S.Description idx={idx} type={"boss"}>
+							<S.Description idx={idx} type={"boss"}>
 								<div>
 									<h2>{item.title}</h2>
 									<p>{item.description}</p>
 								</div>
-							</S.Description> */}
+							</S.Description>
 						</S.Item>
 					))}
 			</Slider>

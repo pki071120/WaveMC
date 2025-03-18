@@ -25,8 +25,6 @@ export const Logo = styled.div`
 	justify-content: center;
 	width: 70px;
 	height: 70px;
-	@media (max-width: 600px) {
-	}
 `;
 
 export const Footer = styled.div`
@@ -35,11 +33,6 @@ export const Footer = styled.div`
 	width: 95vw;
 	justify-content: space-around;
 	align-items: end;
-
-	@media (max-width: 600px) {
-		height: 95vh;
-		position: absolute;
-	}
 `;
 
 export const DiscordLink = styled.a`
@@ -66,47 +59,34 @@ export const SubPagesWrapper = styled.div`
 	width: 100%;
 	height: auto;
 	justify-content: center;
-	align-items: center;
+	align-items: center; /* ✅ 요소들이 하단으로 안 붙도록 조정 */
 	color: #dadada;
 
 	@media (max-width: 600px) {
-		align-items: flex-end;
+		align-items: center; /* ✅ flex-end 제거 */
 	}
+`;
 
-	span {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.5rem;
+export const Nav = styled.span`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5rem;
+`;
 
-		h2 {
-			display: flex;
-			align-items: center;
-			height: 20px;
-		}
+export const TitleText = styled.h2`
+	display: flex;
+	align-items: center;
+	height: 20px;
+`;
 
-		img {
-			width: 110px;
-			height: 60px;
-			transition: filter 0.3s ease;
-			border-radius: 0.4rem;
+export const TitleImg = styled.img`
+	width: 110px;
+	height: 60px;
+	transition: filter 0.3s ease;
+	border-radius: 0.4rem;
 
-			&:hover {
-				filter: brightness(1.2);
-			}
-		}
-
-		div {
-			width: 110px;
-			height: 60px;
-			transition: filter 0.3s ease;
-			:focus {
-				outline: none;
-			}
-
-			&:hover {
-				filter: brightness(1.01);
-			}
-		}
+	&:hover {
+		filter: brightness(1.2);
 	}
 `;
