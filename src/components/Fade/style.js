@@ -51,7 +51,7 @@ export const Description = styled.div`
 		width: 100vw;
 		position: absolute;
 		justify-content: center;
-		top: 73dvh;
+		top: 65dvh;
 		bottom: auto;
 		right: auto;
 		left: auto;
