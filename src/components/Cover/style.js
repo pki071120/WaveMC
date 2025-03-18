@@ -11,7 +11,7 @@ export const Container = styled.div`
 	position: fixed;
 `;
 
-export const Header = styled.div`
+export const Header = styled.header`
 	display: flex;
 	width: 100%;
 	justify-content: flex-end;
@@ -27,7 +27,7 @@ export const Logo = styled.div`
 	height: 70px;
 `;
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
 	display: flex;
 	margin: 1rem;
 	width: 95vw;
@@ -64,6 +64,7 @@ export const SubPagesWrapper = styled.div`
 
 	@media (max-width: 600px) {
 		align-items: center; /* ✅ flex-end 제거 */
+		justify-content: baseline;
 	}
 `;
 
@@ -72,6 +73,10 @@ export const Nav = styled.span`
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5rem;
+
+	@media (max-width: 600px) {
+		width: 33%;
+	}
 `;
 
 export const TitleText = styled.h2`
@@ -81,12 +86,18 @@ export const TitleText = styled.h2`
 `;
 
 export const TitleImg = styled.img`
-	width: 110px;
-	height: 60px;
+	width: 6.875rem;
+	height: 3.75rem;
 	transition: filter 0.3s ease;
 	border-radius: 0.4rem;
 
 	&:hover {
 		filter: brightness(1.2);
+	}
+
+	@media (max-width: 450px) {
+		width: 100%;
+		height: 4rem;
+		object-fit: cover;
 	}
 `;

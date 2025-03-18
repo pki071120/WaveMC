@@ -16,7 +16,7 @@ const Cover = ({ navigation, isMuted, setIsMuted }) => {
 		};
 	}, []);
 	return (
-		<S.Container>
+		<S.Container id="con">
 			<S.Header>
 				{width <= 600 && (
 					<S.Sound onClick={() => setIsMuted((prev) => !prev)}>
