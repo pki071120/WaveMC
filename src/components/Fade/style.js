@@ -51,8 +51,8 @@ export const Description = styled.div`
 		width: 100vw;
 		position: absolute;
 		justify-content: center;
-		top: auto;
-		bottom: 8rem;
+		top: 73dvh;
+		bottom: auto;
 		right: auto;
 		left: auto;
 	}
